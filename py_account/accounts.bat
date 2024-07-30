@@ -1,0 +1,1 @@
+python C:\Users\aslan\Desktop\Workspace\py\py_account\accounts.py

@@ -1,0 +1,1 @@
+python wiper.py

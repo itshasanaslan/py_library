@@ -1,0 +1,6 @@
+echo "1 - aef.exe" 
+"2 - initiate_sebit"
+echo "3 - accounts.py"
+echo "4 - render_html.py"
+echo "5 - wiper"
+echo "6 - pdf_crop.py"

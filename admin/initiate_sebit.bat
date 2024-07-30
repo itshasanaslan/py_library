@@ -1,0 +1,1 @@
+python C:\Users\aslan\Desktop\Workspace\py\sebit_auto\django\ProjectFun\manage.py runserver

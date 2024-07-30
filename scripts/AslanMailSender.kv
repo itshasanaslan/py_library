@@ -1,0 +1,158 @@
+<MainPage>:
+    id: main_win
+    orientation: "vertical"
+    spacing: 10
+    space_x: self.size[0]/3
+    canvas.before:
+        Color:
+            rgba: (1,1,1,1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        size_hint_y: None
+        height: 50
+        canvas.before:
+            Color:
+                rgba: (.06, .45, .45, 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text : "Mail Gonder"
+            bold : True
+            size_hint_x: .9
+      
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 10
+        size_hint_y: None
+        height: 220
+        Label:
+            id: info
+            text: ''
+            markup: True
+            size_hint_y: None
+            height: 20
+        TextInput:
+            id: alici
+            hint_text: "Alici"
+            text: "aslanhassan98@gmail.com"
+            multiline: False
+            size_hint: 0.6,1
+            pos_hint: {'x':0.2,'top':1}
+            focus: True
+            on_text_validate: konu
+            
+        TextInput:
+            id: konu
+            hint_text: "Konu"
+            size_hint: 0.6,1
+            pos_hint: {'x':0.2,'top':1}
+            multiline: False
+            on_text_validate: mesaj = True
+        TextInput:
+            id: mesaj
+            hint_text: "Mesaj"
+            size_hint: 0.6,1
+            pos_hint: {'x':0.2,'top':1}
+            multiline: False
+            on_text_validate: dosyalar = True
+
+        TextInput:
+            id: directory
+            hint_text: "Dizini gir."
+            size_hint: 0.6,1
+            pos_hint: {'x':0.2,'top':1}
+            multiline: False
+            on_text_validate: dosyalar = True
+        TextInput:
+            id: dosyalar
+            hint_text: "Dosya isimlerini gir."
+            size_hint: 0.6,1
+            pos_hint: {'x':0.2,'top':1}
+            multiline: False
+            on_text_validate: dizin_ekle = True
+    BoxLayout:
+        orientation: 'horizontal'
+        AddDirectoryButton:
+            id:dizin_ekle
+            text:'dizini ekle'
+            size_hint: 0.01,0.4
+            pos_hint: {'x':0.4,'top':1}
+            bold:True
+            on_release:root.dizin_ekle()
+        SignUpButton:
+            text:"Gonder"
+            size_hint_y: None
+            height: 40
+            bold:True
+            size_hint: 0.01,0.4
+            pos_hint: {'x':0.4,'top':1}
+            on_release: root.mail_send()
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            id:dizin_info
+            text:''
+            markup: True
+            size_hint_y: None
+            height: 20 
+        Label:
+            id:dizin_info1
+            text:''
+            markup: True
+            size_hint_y: None
+            height: 20
+        Label:
+            id:dizin_info2
+            text:''
+            markup: True
+            size_hint_y: None
+            height: 20
+        Label:
+            id:dizin_info3
+            text:''
+            markup: True
+            size_hint_y: None
+            height: 20
+        Label:
+            id:dizin_info4
+            text:''
+            markup: True
+            size_hint_y: None
+            height: 20
+        Label:
+            id:dizin_info5
+            text:''
+            markup: True
+            size_hint_y: None
+            height: 20
+  
+    Widget:
+<SignUpButton@Button>:
+    background_color: (0,0,0,0)
+    background_normal:''
+    back_color: (0,1,0,1)
+    border_radius: [18]
+    canvas.before:
+        Color:
+            rgba: self.back_color
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: self.border_radius
+
+<AddDirectoryButton@Button>:
+    background_color: (0,0,0,0)
+    background_normal:''
+    back_color: (0,1,0,1)
+    border_radius: [18]
+    canvas.before:
+        Color:
+            rgba: self.back_color
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: self.border_radius

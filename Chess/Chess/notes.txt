@@ -1,0 +1,2 @@
+discord botu içinde siyah beyaz kareler ve siyah beyaz taşlar ascii ile yazdırılıyor.
+Ancak konsol bu karakterleri desteklemiyor.

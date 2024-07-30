@@ -1,0 +1,123 @@
+
+<MainPagesMenu>:
+    size_hint: .999, .999
+    pos_hint: {'center_x': .5, 'center_y': .5}
+    do_default_tab: False
+
+    TabbedPanelItem:
+        text: 'Directories'
+        BoxLayout:
+            orientation: 'vertical'
+            height: 1
+            spacing: 10
+            canvas.before:
+                Color:
+                    rgba: (.06, .45, .45, 1)
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            Label:
+                text:"Add/delete directories"
+            BoxLayout:
+                orientation:'vertical'
+                TextInput:
+                    text_hint: "add a directory..."
+                BoxLayout:
+                    orientation:'horizontal'
+                    Button:
+                        text:'1'
+                    Button:
+                        text:'2'
+                BoxLayout:
+                    orientation:'vertical'
+                    Label:
+                        text:'label 1'
+                        markup: True
+                        size_hint_y: None
+                        height: 20
+                    Label:
+                        text:'label 2'
+                        markup: True
+                        size_hint_y: None
+                        height: 20
+                    Label:
+                        text:'label 3'
+                        markup: True
+                        size_hint_y: None
+                        height: 20
+                    Label:
+                        text:'label 4'
+                        markup: True
+                        size_hint_y: None
+                        height: 20
+                    Label:
+                        text:'label 5'
+                        markup: True
+                        size_hint_y: None
+                        height: 20
+                    Label:
+                        text:'label 6'
+                        markup: True
+                        size_hint_y: None
+                        height: 20
+            Widget:
+    TabbedPanelItem:
+        text: 'Execute Order'
+        GridLayout:
+            cols: 2
+            BoxLayout:
+                orientation:'horizontal'
+                size_hint_y: None
+                cols:2
+                BoxLayout:
+                    orientation:'horizontal'
+                    Label:
+                        size_hint: .999, .999
+                        text:"Execute Order"
+                    Button: 
+                        id: wants_execute
+                        text:root.this_buttons_text
+                        on_release: root.execute_button_click()
+                        pos_hint: {'center_x': .5, 'center_y': .5}
+                        size_hint: 0.45,0.45
+                    Button:
+                        text:'gg'
+                
+        
+
+    TabbedPanelItem:
+        text: 'Settings'
+        Label:
+            text:"Settings will be here."
+    TabbedPanelItem:
+        text: 'Developer'
+        Label:
+            text:"Developer info"
+
+
+
+<SignUpButton@Button>:
+    background_color: (0,0,0,0)
+    background_normal:''
+    back_color: (0,1,0,1)
+    border_radius: [18]
+    canvas.before:
+        Color:
+            rgba: self.back_color
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: self.border_radius
+
+<AddDirectoryButton@Button>:
+    background_color: (0,0,0,0)
+    background_normal:''
+    back_color: (0,1,0,1)
+    border_radius: [18]
+    canvas.before:
+        Color:
+            rgba: self.back_color
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: self.border_radius
